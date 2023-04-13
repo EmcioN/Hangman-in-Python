@@ -72,7 +72,15 @@
 ## Testing
 
 ## Deployment
+ * To deploy this site, first you need to log in to Heroku or create an account if you don't have one yet. Once you're on the main page, click the New button in the top right corner and select Create New App from the drop-down menu. Choose a unique name for your app and select the region you want it to run in, then click Create App.
 
+ * Next, go to the Deploy Tab and click on the Settings Tab. Scroll down to Config Vars and click Reveal Config Vars. Add a key called "port" with a value of "8000" and click Add. Then add another key called "CREDS" with your Google credentials as the value, and click Add again.
+
+ * Scroll down to the Buildpack section and click Add Buildpack. Select "python" and click Save Changes. Repeat this step to add "node.js" as well. Make sure the Buildpacks are in the correct order by clicking and dragging them if necessary.
+
+ * Go back to the top of the page and select the Deploy tab again. Choose Github as the deployment method and confirm that you want to connect to your Github account. Search for your repository name and click the connect button.
+
+ Finally, scroll to the bottom of the deploy page and select your preferred deployment type. You can choose to enable automatic deploys for automatic deployment when you push updates to Github. That's it, your site should now be deployed!
 ## Credits
 [Stackoverflow](https://stackoverflow.com/) was also very helpful. There you can find a solution with an explanation to most problems.
 
