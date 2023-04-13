@@ -80,7 +80,7 @@
 
  * Go back to the top of the page and select the Deploy tab again. Choose Github as the deployment method and confirm that you want to connect to your Github account. Search for your repository name and click the connect button.
 
- Finally, scroll to the bottom of the deploy page and select your preferred deployment type. You can choose to enable automatic deploys for automatic deployment when you push updates to Github. That's it, your site should now be deployed!
+ * Finally, scroll to the bottom of the deploy page and select your preferred deployment type. You can choose to enable automatic deploys for automatic deployment when you push updates to Github. That's it, your site should now be deployed!
 ## Credits
 [Stackoverflow](https://stackoverflow.com/) was also very helpful. There you can find a solution with an explanation to most problems.
 
