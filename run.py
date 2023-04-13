@@ -95,4 +95,4 @@ def hangman_graphic(self, guesses):
 			print "|             "
 			print "Oh no.. You didn't save the Hangman"			
 			print "GAME OVER!"
-			self.__init__(
+	
