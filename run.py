@@ -27,6 +27,7 @@ def check_letter(letter,word):
 def display_status():
 	print(src.graphic.hangman_graphic[6 - lives])
 	print(reveal)
+	print('Your lives',lives)
 
 while win == False and lives > 0:
   display_status()
@@ -45,3 +46,15 @@ if win:
   print('Congratulations you saved the hangman!!')
 else:
   print('This time you failed to save the hangman. The word was:',word)  
+
+name = input('What is your name ?')
+print("  -----^")
+print("  |    |")
+print(" x_x   |")
+print(" /|\   |")
+print(" / \   |")
+print("       |")
+print("-------o")
+print('Welcome to HANGMAN',name,'!!')
+print('-------------------------------')
+print('The rules are simple. Try to guess the word before you hang our poor dude. Guess the letters or guess the whole word')
