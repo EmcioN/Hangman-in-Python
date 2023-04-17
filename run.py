@@ -19,15 +19,14 @@ def hangman_game():
 		Checks if there is a letter given by the player in the word
 		
 		"""
-				
-		for i in range(0, len(word)):
-			letter = word[i]
-			if guess == letter:
-				reveal[i] = guess
+
+		for i in range(len(word)):
+			if letter == word[i]:
+				reveal[i] = letter
 			if '_' not in reveal:
 				return True
-			else:
-				return False	
+		else:
+			return False	
 
 	def display_status():
 		"""
@@ -75,3 +74,16 @@ elif play_game.lower() == "n":
     print("Okay, see you next time!")	
 else:
     print("I don't understand, can you repeat?")
+
+play_again = input("Would you like to play again? (y/n) ")
+
+while True:
+    if play_again.lower() == "y":
+        print("Let's play the game!")
+        hangman_game()
+        play_again = input("Would you like to play again? (y/n) ")
+    elif play_again.lower() == "n":
+        print("Thanks for playing! Goodbye!")
+        break
+    else:
+        play_again = input("I don't understand, please enter 'y' or 'n': ")
