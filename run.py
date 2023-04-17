@@ -1,84 +1,32 @@
-import gspread
-from google.oauth2.service_account import Credentials
-import random
+import random, os 
+from src.graphic import hangman_graphic
+from src.words import words
 
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('Hangman') 
-highscore = SHEET.worksheet("highscore")
 
-data = highscore.get_all_values()   
+reveal = list(len(words)*'_')
+lives = 6
+win = False
 
-#Words
+while win == False and lives > 0:
+	print(reveal)
+	guess = input('Guess a letter or an entire word:')
+	guess = guess.upper()
 
-words =["beetle", "satiate", "thread", "protective", "tasteless",
- "conduct","elastic", "satisfy", "sweater", "insurance", "marvelous"]
-
-def pick_word():
-    """
-    Get a random word from the words list
-    """
-    random_word = random.choice(words)
-    return random_word.upper()
-
-# Hangman graphics 
-
-def hangman_graphic(self, guesses):
-		if guesses == 0:
-			print "________      "
-			print "|      |      "
-			print "|             "
-			print "|             "
-			print "|             "
-			print "|             "
-		elif guesses == 1:
-			print "________      "
-			print "|      |      "
-			print "|      0      "
-			print "|             "
-			print "|             "
-			print "|             "
-		elif guesses == 2:
-			print "________      "
-			print "|      |      "
-			print "|      0      "
-			print "|     /       "
-			print "|             "
-			print "|             "
-		elif guesses == 3:
-			print "________      "
-			print "|      |      "
-			print "|      0      "
-			print "|     /|      "
-			print "|             "
-			print "|             "
-		elif guesses == 4:
-			print "________      "
-			print "|      |      "
-			print "|      0      "
-			print "|     /|\     "
-			print "|             "
-			print "|             "
-		elif guesses == 5:
-			print "________      "
-			print "|      |      "
-			print "|      0      "
-			print "|     /|\     "
-			print "|     /       "
-			print "|             "
-		else:
-			print "________      "
-			print "|      |      "
-			print "|      0      "
-			print "|     /|\     "
-			print "|     / \     "
-			print "|             "
-			print "Oh no.. You didn't save the Hangman"			
-			print "GAME OVER!"
-	
+	if guess == words:
+      win = True
+      reveal = word
+	if len(guess) == 1 and guess in word:
+		for i in range(0, len(words)):
+			letter = word[i]
+			if guess == letter:
+				reveal[i] = guess
+			if '_' not in reveal:
+				win = True	
+   
+    else:
+      lives -= 1
+  status()
+if win:
+  print('Congratulations you saved the hangman!!')
+else:
+  print('This time you failed to save the hangman. The word was:',words)  
