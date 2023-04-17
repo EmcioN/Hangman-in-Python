@@ -1,20 +1,22 @@
 import random, os 
-from src.graphic import hangman_graphic
-from src.words import words
+from graphic import hangman_graphic
+from words import words
 
 
-reveal = list(len(words)*'_')
+word = random.choice(words)
+word = word.upper()
+reveal = list(len(word)*'_')
 lives = 6
 win = False
 
-def check_letter(letter,words):
+def check_letter(letter,word):
 	"""
 	Checks if there is a letter given by the player in the word
 	"""
-	
+
 	global reveal
-	for i in range(0, len(words)):
-		letter = words[i]
+	for i in range(0, len(word)):
+		letter = word[i]
 		if guess == letter:
 			reveal[i] = guess
 		if '_' not in reveal:
@@ -22,21 +24,24 @@ def check_letter(letter,words):
 		else:
 			return False	
 
-while win == False and lives > 0:
+def display_status():
+	print(src.graphic.hangman_graphic[6 - lives])
 	print(reveal)
-	guess = input('Guess a letter or an entire word:')
-	guess = guess.upper()
 
-	if guess == words:
-      win = True
-      reveal = words
-	if len(guess) == 1 and guess in words:
-			
-   
-    else:
-      lives -= 1
-  
+while win == False and lives > 0:
+  display_status()
+  guess = input('Guess a letter or an entire word:')
+  guess = guess.upper()
+
+  if guess == word:
+    win = True
+    reveal = word
+  elif len(guess) == 1 and guess in word:
+    win = check_letter(guess,word)
+  else:
+    lives -= 1	
+display_status()
 if win:
   print('Congratulations you saved the hangman!!')
 else:
-  print('This time you failed to save the hangman. The word was:',words)  
+  print('This time you failed to save the hangman. The word was:',word)  
