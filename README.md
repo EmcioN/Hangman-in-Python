@@ -48,19 +48,51 @@
 ## Features
 ### Name 
  The player will be able to choose his name.
+
+![name](/doc/images/name-input.png)
+
 ### Start Game
  The player will be able to choose whether he wants to start a new game or finish the game. Just type "y" to start or "n" to stop
+
+![play](/doc/images/start-game.png)
+
 ### Stage
  The player will see a graphic that will tell him how many mistakes he can still make. With each level, lines will be added until the hangman character is drawn. When we see the whole character, we lose the game. Guess the word faster to save the poor guy.
   * Stage 1
+
+  ![start](/doc/images/stage1.png)
+
   * Stage 2
+
+  ![stage2](/doc/images/stage2.png)
+
   * Stage 3
+
+  ![stage3](/doc/images/stage3.png)
+
   * Stage 4
+
+  ![stage4](/doc/images/stage4.png)
+
   * Stage 5
+
+  ![stage5](/doc/images/stage5.png)
+
   * Stage 6
+
+  ![stage6](/doc/images/stage6.png)
+
   * Stage 7 
+
+  ![stage7](/doc/images/stage7.png)
+
 ### End Game
  The contestant will see here whether he won or lost. He will also have the option to start a new game or end the program. The choice will be as simple as before. Simply type "y" or "n" to continue 
+
+![end-game](/doc/images/end-game.png)
+
+![end-game](/doc/images/end-game-win.png)
+
 ## Tehnologies used
 ### Languages Used 
 * [Python](https://www.python.org/) - Used to create the project
