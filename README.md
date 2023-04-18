@@ -1,4 +1,4 @@
-# Hangman
+![logo](/doc/images/logo.png)
 
 
 ## Table of Contents
@@ -56,6 +56,11 @@
 
 ![play](/doc/images/start-game.png)
 
+### Rules
+ Quick and short rules for reference
+ 
+ ![rules](/doc/images/rules.png)
+
 ### Stage
  The player will see a graphic that will tell him how many mistakes he can still make. With each level, lines will be added until the hangman character is drawn. When we see the whole character, we lose the game. Guess the word faster to save the poor guy.
   * Stage 1
@@ -104,15 +109,43 @@
 ## Testing
 
 ## Deployment
- * To deploy this site, first you need to log in to Heroku or create an account if you don't have one yet. Once you're on the main page, click the New button in the top right corner and select Create New App from the drop-down menu. Choose a unique name for your app and select the region you want it to run in, then click Create App.
+ * Log in to Heroku or create a new account.
+ * Click the New button in the top right corner and select Create New App.
+ * Choose a unique name for your app and select the region you want it to run in, then click Create App.
+ * Go to the Deploy tab and click on the Settings tab.
+ * Scroll down to Config Vars and click Reveal Config Vars.
+ * Add a key called "port" with a value of "8000" and click Add.
+ * Add another key called "CREDS" with your Google credentials as the value, and click Add again.
+ * Scroll down to the Buildpack section and click Add Buildpack.
+ * Select "python" and click Save Changes.
+ * Repeat step 8 and add "node.js" as well.
+ * Make sure the Buildpacks are in the correct order by clicking and dragging them if necessary.
+ * Go back to the top of the page and select the Deploy tab again.
+ * Choose Github as the deployment method and confirm that you want to connect to your Github account.
+ * Search for your repository name and click the connect button.
+ * Scroll to the bottom of the deploy page and select your preferred deployment type.
+ * You can choose to enable automatic deploys for automatic deployment when you push updates to Github.
+ * That's it, your site should now be deployed!
 
- * Next, go to the Deploy Tab and click on the Settings Tab. Scroll down to Config Vars and click Reveal Config Vars. Add a key called "port" with a value of "8000" and click Add. Then add another key called "CREDS" with your Google credentials as the value, and click Add again.
+### Forking 
+ * Open GitHub
+ * Click on the project to be forked
+ * Find the Fork button at the top right of the page
+ * Once you click the button the fork will be in your repository
 
- * Scroll down to the Buildpack section and click Add Buildpack. Select "python" and click Save Changes. Repeat this step to add "node.js" as well. Make sure the Buildpacks are in the correct order by clicking and dragging them if necessary.
+### Cloning
+ * Open GitHub and locate the repository you want to clone.
+ * Click on the "Clone or download" button.
+ * Copy the URL provided.
+ * Open a terminal or command prompt on your computer.
+ * Navigate to the directory where you want to clone the repository.
+ * Enter the following command:
 
- * Go back to the top of the page and select the Deploy tab again. Choose Github as the deployment method and confirm that you want to connect to your Github account. Search for your repository name and click the connect button.
-
- * Finally, scroll to the bottom of the deploy page and select your preferred deployment type. You can choose to enable automatic deploys for automatic deployment when you push updates to Github. That's it, your site should now be deployed!
+ git clone [paste the URL you copied]
+ 
+ * Press Enter.
+ * Wait for the repository to finish cloning.
+ * Once the cloning process is complete, you should see a message confirming the successful clone. 
 ## Credits
 [Stackoverflow](https://stackoverflow.com/) was also very helpful. There you can find a solution with an explanation to most problems.
 
