@@ -163,6 +163,8 @@ Googling I found advice to set the clear function. ![clear](/doc/images/clear.pn
  * Wait for the repository to finish cloning.
  * Once the cloning process is complete, you should see a message confirming the successful clone. 
 ## Credits
+With the help of the Love sandwich project and many different tutorials on youtube I was able to put my project together. It wasn't easy, but thanks to the experience gained during JavaScript, things were a bit easier than before. My friends were useful, namely they tested the game for me while having fun.
+
 [Stackoverflow](https://stackoverflow.com/) was also very helpful. There you can find a solution with an explanation to most problems.
 
 [W3school](https://www.w3schools.com/) is another place where I was looking for information. Everything is nicely explained and you can test it yourself.

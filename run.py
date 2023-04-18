@@ -1,7 +1,7 @@
-import random, os 
+import random
+import os 
 from src.graphic import hangman_graphic
 from src.words import words
-
 
 
 def hangman_game():
