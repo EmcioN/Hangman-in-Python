@@ -18,16 +18,15 @@ def hangman_game():
 	def check_letter(letter,word):
 		"""
 		Checks if there is a letter given by the player in the word
-		
 		"""
-
+		
 		for i in range(len(word)):
 			if letter == word[i]:
-				reveal[i] = letter
+				reveal[i] = letter					
 			if '_' not in reveal:
-				return True
-		else:
-			return False	
+				return True				
+		else:			
+			return False				
 
 	def display_status():
 		"""
@@ -38,28 +37,42 @@ def hangman_game():
 		print(" ".join(reveal))
 		print('Your lives',lives)
 		print('Used letters:', ' '.join(used_letters))
-
+		
+		
 	while win == False and lives > 0:
 		display_status()
 		guess = input('Guess a letter or an entire word:')
 		guess = guess.upper()
 		if guess == word:
 			win = True
-			reveal = word
-		elif len(guess) == 1 and guess in word:
-			win = check_letter(guess,word)
-		else:
+			reveal = word			
+		elif len(guess) == 1 and guess in word:			
+			win = check_letter(guess,word)			
+		else:			
 			lives -= 1
-			used_letters.append(guess)
+			used_letters.append(guess)			
 		if guess not in used_letters:
 			used_letters.append(guess)				
 		display_status()
 	if win:
+		print('---------------------------------------')
 		print('Congratulations you saved the hangman!!')
+		print('---------------------------------------')
 	else:
-		print('This time you failed to save the hangman. The word was:',word)  
+		print('--------------------------------------------------------------')
+		print('This time you failed to save the hangman. The word was:',word)
+		print('--------------------------------------------------------------')  
 
 name = input('What is your name ?')
+
+print("   _    _")
+print("  | |  | |")
+print("  | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __")
+print("  |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \\")
+print("  | |  | | (_| | | | | (_| | | | | | | (_| | | | |")
+print("  |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|")
+print("                       __/ |")
+print("                      |___/")
 print("  -----^")
 print("  |    |")
 print(" x_x   |")
@@ -92,4 +105,4 @@ while True:
         print("Thanks for playing! Goodbye!")
         break
     else:
-        play_again = input("I don't understand, please enter 'y' or 'n': ")
+        play_again = input("I don't understand, please enter y or n: ")

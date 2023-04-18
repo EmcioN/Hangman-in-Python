@@ -26,7 +26,7 @@
  This is a classic Hangman game implemented in Python. You can play the game in the browser. The game features graphics and colors that are implemented in Python.
 ## User Goals
   * The user wants to play a game of Hangman.
-  * The user wants to see graphics and colors that are visually appealing.
+  * The user wants to see graphic of the hangman. 
   * The user wants to be able to play the game in the browser.
 ## User Stories
   * As a user, I want to be able to start a new game.
