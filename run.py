@@ -10,7 +10,7 @@ def hangman_game():
 	"""	
 	word = random.choice(words)
 	word = word.upper()
-	reveal = list(len(word)*'_')
+	reveal = ["_" for i in range(len(word))]
 	lives = 6
 	win = False
 
@@ -31,9 +31,10 @@ def hangman_game():
 	def display_status():
 		"""
 		Show hangman graphic, how many lives you have and word to reveal
-		"""		
+		"""	
+		os.system("clear")	
 		print(hangman_graphic[6 - lives])
-		print(reveal)
+		print(" ".join(reveal))
 		print('Your lives',lives)
 
 	while win == False and lives > 0:
