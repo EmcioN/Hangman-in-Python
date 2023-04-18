@@ -13,6 +13,7 @@ def hangman_game():
 	reveal = ["_" for i in range(len(word))]
 	lives = 6
 	win = False
+	used_letters = []
 
 	def check_letter(letter,word):
 		"""
@@ -36,6 +37,7 @@ def hangman_game():
 		print(hangman_graphic[6 - lives])
 		print(" ".join(reveal))
 		print('Your lives',lives)
+		print('Used letters:', ' '.join(used_letters))
 
 	while win == False and lives > 0:
 		display_status()
@@ -48,6 +50,9 @@ def hangman_game():
 			win = check_letter(guess,word)
 		else:
 			lives -= 1
+			used_letters.append(guess)
+		if guess not in used_letters:
+			used_letters.append(guess)				
 		display_status()
 	if win:
 		print('Congratulations you saved the hangman!!')
