@@ -207,6 +207,8 @@ After cleaning the code, CI python linter didn't show me any errors
 ## Credits
 With the help of the Love sandwich project and many different tutorials on youtube I was able to put my project together. It wasn't easy, but thanks to the experience gained during JavaScript, things were a bit easier than before. My friends were useful, namely they tested the game for me while having fun.
 
+[Youtube](https://youtube.com/) was very helpful. I've looked at a lot of different guides there
+
 [Stackoverflow](https://stackoverflow.com/) was also very helpful. There you can find a solution with an explanation to most problems.
 
 [W3school](https://www.w3schools.com/) is another place where I was looking for information. Everything is nicely explained and you can test it yourself.
