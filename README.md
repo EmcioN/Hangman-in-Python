@@ -107,6 +107,7 @@
 * [Codeanywhere](https://app.codeanywhere.com/) - Used to build the project
 * [Heroku](https://id.heroku.com)- Used to deploy the project
 * [Visual Studio](https://code.visualstudio.com/)- Used to create most of README file
+* [CI Python Linter](https://pep8ci.herokuapp.com/) - Used to test the code
 ## Testing
 The code was written using various tutorials. I run the game functions on a regular basis to see if there are any errors. I was getting errors like:
 
@@ -115,15 +116,31 @@ The code was written using various tutorials. I run the game functions on a regu
 
 * ![bug2](/doc/images/name-bug.png)
 
-Some of them were easy to solve. Others gave me food for thought, but with the help of various guides and google I managed to solve them somehow.
+Some of them were easy to solve. Others gave some time to think, but with the help of various guides and google I managed to solve them somehow.
 
-I didn't know how to deal with the growing mess on the screen.
+* I didn't know how to deal with the growing mess on the screen.
 
 ![mess](/doc/images/mess.png)
 
 Googling I found advice to set the clear function. ![clear](/doc/images/clear.png)All I had to do was import the os and add the lines of code in the right place. After each of our decisions, the screen will be cleared and new data will appear
 
 ![clear place](/doc/images/clear-spot.png)
+
+* I used CI python Linter to verify my code. In the very beginning, I had a lot of errors.
+
+![errors](/doc/images/lotsoferrors.png)
+
+Most of them were indentation problems. It took me a while to get rid of them all. I made a mistake by accident. The mistake cost me some time before I noticed that I had put the if and else statement too deep into the function. The problem was solved when I fixed the indentation
+
+I had to correct the graphics because I had an error:
+
+![errors](/doc/images/invalid.png)
+
+In the place where there was a backslash, I had to add two characters so that the program knew that it wanted this character and not, for example, go to the next line
+
+After cleaning the code, CI python linter didn't show me any errors
+
+![noerrors](/doc/images/noerror.png)
 
 ## Deployment
  * Log in to Heroku or create a new account.
