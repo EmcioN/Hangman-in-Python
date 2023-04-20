@@ -165,6 +165,8 @@ Googling I found advice to set the clear function. ![clear](/doc/images/clear.pn
 
  * That's it, your site should now be deployed!
 
+ * Link to the game : [Hangman](https://hangman-small-game.herokuapp.com/)
+
 ## Local Development
 ### Forking 
  * Open GitHub

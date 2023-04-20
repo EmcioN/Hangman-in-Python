@@ -19,13 +19,15 @@ def hangman_game():
         """
         Checks if there is a letter given by the player in the word
         """
-        for i in range(0, len(word)):
+        match = False
+        for i in range(len(word)):
             if letter == word[i]:
                 reveal[i] = letter
-        if '_' not in reveal:
-            return True
-        else:
-            return False
+                match = True
+            if '_' not in reveal:
+                return True
+            else:
+                return False
 
     def display_status():
         """
