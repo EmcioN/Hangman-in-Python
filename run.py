@@ -62,7 +62,12 @@ def hangman_game():
         print('--------------------------------------------------------------')
 
 
-name = input('What is your name ?')
+while True:
+    name = input('What is your name? (max 14 letters, only alphabet) ')
+    if name.isalpha() and len(name) <= 14:
+        break
+    else:
+        print('Invalid input. Please try again.')
 
 print("   _    _")
 print("  | |  | |")
